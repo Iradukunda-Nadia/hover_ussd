@@ -66,6 +66,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
     } else if(call.method.equals("hoverInitial")) {
       Hover.initialize(activity.getApplicationContext());
+      Hover.setBranding("E-LORRY", this);
     } else {
       result.notImplemented();
     }
