@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22bba4e2-5e0b-4ba7-bf35-9f477cb51dcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-    </list>
+    <list default="true" id="22bba4e2-5e0b-4ba7-bf35-9f477cb51dcf" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1596904412123</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1612847726250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612847726250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,10 +73,34 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1612843580505">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1612847589805">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1612843580505" />
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1612847589805" />
+    <state width="1306" height="247" key="GridCell.Tab.0.bottom" timestamp="1612847671130">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612847671130" />
+    <state width="1306" height="247" key="GridCell.Tab.0.center" timestamp="1612847671129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612847671129" />
+    <state width="1306" height="247" key="GridCell.Tab.0.left" timestamp="1612847671128">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612847671128" />
+    <state width="1306" height="247" key="GridCell.Tab.0.right" timestamp="1612847671129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612847671129" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1612847741623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612847741623" />
   </component>
 </project>
