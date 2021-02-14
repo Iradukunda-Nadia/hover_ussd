@@ -34,7 +34,7 @@ public class HoverUssdApi {
 
 
             ///Initialize @HoverBuilder
-            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id).setHeader("Working").initialProcessingMessage("Please wait");
+            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id);
 
             ///If there are action with variables
             ///
