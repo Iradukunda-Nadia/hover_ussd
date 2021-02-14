@@ -30,12 +30,11 @@ public class HoverUssdApi {
 
 
 
-        public void sendUssd(String action_id, HashMap<String, String> extra, BroadcastReceiver smsReceiver) {
+        public void sendUssd(String action_id, HashMap<String, String> extra) {
 
-            LocalBroadcastManager.getInstance(activity).registerReceiver(smsReceiver, new IntentFilter("com.lucdotdev.hover_ussd.SMS_MISS"));
 
             ///Initialize @HoverBuilder
-            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id).setHeader("Transaction in progress").initialProcessingMessage("please wait");
+            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id).setHeader("Working").initialProcessingMessage("Please wait");
 
             ///If there are action with variables
             ///
@@ -46,6 +45,7 @@ public class HoverUssdApi {
             }
 
             Intent buildIntent = builder.buildIntent();
+            activity.startActivityForResult(buildIntent, 0);
         }
 
 
