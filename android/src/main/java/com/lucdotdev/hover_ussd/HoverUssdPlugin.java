@@ -80,7 +80,6 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   @Override
   public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
     activity = binding.getActivity();
-    binding.addActivityResultListener(this);
 
   }
 
