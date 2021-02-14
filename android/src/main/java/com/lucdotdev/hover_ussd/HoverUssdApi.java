@@ -45,7 +45,6 @@ public class HoverUssdApi {
             }
 
             Intent buildIntent = builder.buildIntent();
-            activity.startActivityForResult(buildIntent, 0);
         }
 
 
