@@ -61,7 +61,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
     if (call.method.equals("hoverStartTransaction")) {
 
       hoverUssdApi = new HoverUssdApi(activity);
-      hoverUssdApi.sendUssd((String) call.argument("action_id"), (HashMap<String, String>) call.argument("extras"),smsReceiver);
+      hoverUssdApi.sendUssd((String) call.argument("action_id"), (HashMap<String, String>) call.argument("extras"));
 
 
     } else if(call.method.equals("hoverInitial")) {
