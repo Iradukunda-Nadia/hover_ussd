@@ -30,8 +30,9 @@ public class HoverUssdApi {
 
 
 
-        public void sendUssd(String action_id, HashMap<String, String> extra) {
+        public void sendUssd(String action_id, HashMap<String, String> extra, BroadcastReceiver smsReceiver) {
 
+            LocalBroadcastManager.getInstance(activity).registerReceiver(smsReceiver, new IntentFilter("com.lucdotdev.hover_ussd.SMS_MISS"));
 
             ///Initialize @HoverBuilder
             final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id);
@@ -45,7 +46,7 @@ public class HoverUssdApi {
             }
 
             Intent buildIntent = builder.buildIntent();
-            activity.startActivity(buildIntent);
+            activity.startActivityForResult(buildIntent, 0);
         }
 
 
