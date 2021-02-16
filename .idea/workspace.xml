@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22bba4e2-5e0b-4ba7-bf35-9f477cb51dcf" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/lucdotdev/hover_ussd/HoverUssdPlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613479170581</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update">
+      <created>1613480015028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613480015028</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,9 +214,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1306" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612847671129" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1613479232113">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1613480029447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613479232113" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613480029447" />
   </component>
 </project>

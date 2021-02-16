@@ -118,17 +118,17 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
     return false;
   }
 
-  @Override
+
   public  void onListen(Object arguments, EventChannel.EventSink events) {
     eventSink = events;
   }
 
-  @Override
+
   public void onCancel(Object arguments) {
 
   }
 
-  @Override
+  
   public void onRecevedData(String msg) {
     Toast.makeText(activity, "Error: " +msg, Toast.LENGTH_LONG).show();
     eventSink.success(msg);
