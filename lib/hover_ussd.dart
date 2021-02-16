@@ -11,7 +11,6 @@ class HoverUssd {
   factory HoverUssd() {
     if (_instance == null) {
       final MethodChannel methodChannel = const MethodChannel('hover_ussd');
-      final EventChannel eventChannel = const EventChannel('transaction_event');
       _instance = HoverUssd.private(methodChannel);
     }
     return _instance;
