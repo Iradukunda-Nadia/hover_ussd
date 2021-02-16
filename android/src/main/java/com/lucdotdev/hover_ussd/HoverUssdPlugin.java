@@ -24,7 +24,7 @@ import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.plugin.common.PluginRegistry;
 
 /** HoverUssdPlugin */
-public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware ,PluginRegistry.ActivityResultListener, EventChannel.StreamHandler, HoverUssdSmsReceiver.HoverUssdReceiverInterface {
+public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware ,PluginRegistry.ActivityResultListener{
 
 
   private MethodChannel channel;
@@ -49,11 +49,9 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
 
-    new HoverUssdSmsReceiver(this);
+
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "hover_ussd");
     eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "transaction_event");
-    eventChannel.setStreamHandler(this);
-    channel.setMethodCallHandler(this);
   }
 
   @Override
@@ -74,7 +72,6 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
-    eventChannel.setStreamHandler(null);
   }
 
   @Override
