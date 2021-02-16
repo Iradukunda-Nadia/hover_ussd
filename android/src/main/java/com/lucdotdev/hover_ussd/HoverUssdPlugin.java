@@ -51,7 +51,6 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
 
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "hover_ussd");
-    eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "transaction_event");
   }
 
   @Override
