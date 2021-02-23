@@ -24,7 +24,7 @@ import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.plugin.common.PluginRegistry;
 
 /** HoverUssdPlugin */
-public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware ,PluginRegistry.ActivityResultListener, EventChannel.StreamHandler, HoverUssdSmsReceiver.HoverUssdReceiverInterface {
+public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware ,PluginRegistry.ActivityResultListener, EventChannel.StreamHandler,  {
 
 
   private MethodChannel channel;
@@ -37,13 +37,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
 
 
-  private final BroadcastReceiver smsReceiver = new BroadcastReceiver(){
-    @Override
-    public void onReceive(final Context context, final Intent i){
-      Toast.makeText(activity, "Error: " + i.getStringExtra("status"), Toast.LENGTH_LONG).show();
-      eventSink.success("failed");
-    }
-  };
+
 
 
   @Override
@@ -96,7 +90,6 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   public void onDetachedFromActivity() {
     activity = null;
     ///this help us to destroy the smsReceiver
-   hoverUssdApi.destroySmsReceiver();
 
   }
 
@@ -131,9 +124,5 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
   }
 
-  @Override
-  public void onRecevedData(String msg) {
-    Toast.makeText(activity, "Error: " +msg, Toast.LENGTH_LONG).show();
-    eventSink.success(msg);
-  }
+
 }
