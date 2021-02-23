@@ -29,13 +29,29 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
   private MethodChannel channel;
   private Activity activity;
-
+  static int REQUEST_PERMISSIONS = 1;
 
   private  HoverUssdApi hoverUssdApi;
   private EventChannel eventChannel;
   private EventChannel.EventSink eventSink;
- 
 
+
+  public static boolean hasAllPermissions(Context c) {
+    return hasPhonePermissions(c) && hasAdvancedPermissions(c);
+  }
+
+  private static boolean hasPhonePermissions(Context c) {
+    return Build.VERSION.SDK_INT < 23 || (ContextCompat.checkSelfPermission(c, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED &&
+            ContextCompat.checkSelfPermission(c, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED);
+  }
+
+  private static boolean hasAdvancedPermissions(Context c) {
+    return Hover.isAccessibilityEnabled(c);
+  }
+
+  public void requestAdvancedPermissions(){
+    startActivityForResult(new Intent(this, PermissionActivity.class), REQUEST_PERMISSIONS);
+  }
 
   private final BroadcastReceiver smsReceiver = new BroadcastReceiver(){
     @Override
@@ -104,6 +120,12 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
   @Override
   public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (requestCode == REQUEST_PERMISSIONS) {
+      if (resultCode == RESULT_OK) {
+        Log.d(TAG, "permissions granted");
+      }
+    }
+
     if (requestCode == 0 && resultCode == Activity.RESULT_OK) {
 
       Toast.makeText(activity, "Please wait for confirmation", Toast.LENGTH_LONG).show();
