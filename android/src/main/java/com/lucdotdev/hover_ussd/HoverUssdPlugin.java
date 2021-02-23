@@ -46,7 +46,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   }
 
   private static boolean hasAdvancedPermissions(Context c) {
-    return Hover.isAccessibilityEnabled(c);
+    return Hover.isAccessibilityEnabled(c) && Hover.isOverlayEnabled(c);
   }
 
   public void requestAdvancedPermissions(){
