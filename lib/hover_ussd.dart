@@ -30,14 +30,6 @@ class HoverUssd {
       await _methodChannel.invokeMethod(
           "hoverStartTransaction", {"action_id": actionId, "extras": extras});
 
-  Stream<TransactionState> get onTransactiontateChanged {
-    if (_onTransactionStateChanged == null) {
-      _onTransactionStateChanged = _eventChannel
-          .receiveBroadcastStream()
-          .map((dynamic event) => _parseTransactionState(event));
-    }
-    return _onTransactionStateChanged;
-  }
 
   Future initialize() async {
     await _methodChannel.invokeMethod("hoverInitial");
