@@ -104,12 +104,14 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
       return true;
 
     } else if (requestCode == 0 && resultCode == Activity.RESULT_CANCELED) {
-
-      Toast.makeText(activity, "Error: ", Toast.LENGTH_LONG).show();
+      activity.finish();
 
       eventSink.success("failed");
 
       return true;
+    }
+    else {
+      activity.finish();
     }
     return false;
   }
