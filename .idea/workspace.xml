@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22bba4e2-5e0b-4ba7-bf35-9f477cb51dcf" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="22bba4e2-5e0b-4ba7-bf35-9f477cb51dcf" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614073662284</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update">
+      <created>1614075184377</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1614075184424</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,10 +288,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1306" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612847671129" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1614073672357">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1614075218833">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614073672357" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614075218833" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1614036352397">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
