@@ -98,7 +98,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
       Toast.makeText(activity, "Please wait for confirmation", Toast.LENGTH_LONG).show();
       eventSink.success("pending");
-      finish();
+      activity.finish();
       return true;
 
     } else if (requestCode == 0 && resultCode == Activity.RESULT_CANCELED) {
