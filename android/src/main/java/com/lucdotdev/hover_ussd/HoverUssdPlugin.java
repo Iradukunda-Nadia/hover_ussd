@@ -45,6 +45,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
 
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "hover_ussd");
+    eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "transaction_event");
     channel.setMethodCallHandler(this);
   }
 
@@ -66,11 +67,12 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
+    eventChannel.setStreamHandler(null);
   }
 
   @Override
   public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
-    activity = null;
+    activity = binding.getActivity();
 
   }
 
@@ -81,7 +83,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
   @Override
   public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
-    activity = null;
+    activity = binding.getActivity();
   }
 
   @Override
@@ -113,13 +115,13 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   }
 
   @Override
-  public  void onListen(Object arguments) {
-    activity = null;
+  public  void onListen(Object arguments, EventChannel.EventSink events) {
+    eventSink = events;
   }
 
   @Override
   public void onCancel(Object arguments) {
-    activity = null;
+
   }
 
 
