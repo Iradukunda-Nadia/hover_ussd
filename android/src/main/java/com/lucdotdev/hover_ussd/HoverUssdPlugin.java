@@ -49,10 +49,9 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
 
-    new HoverUssdSmsReceiver(this);
+
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "hover_ussd");
     eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "transaction_event");
-    eventChannel.setStreamHandler(this);
     channel.setMethodCallHandler(this);
   }
 
@@ -61,7 +60,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
     if (call.method.equals("hoverStartTransaction")) {
 
       hoverUssdApi = new HoverUssdApi(activity);
-      hoverUssdApi.sendUssd((String) call.argument("action_id"), (HashMap<String, String>) call.argument("extras"),smsReceiver);
+      hoverUssdApi.sendUssd((String) call.argument("action_id"), (HashMap<String, String>) call.argument("extras"));
 
 
     } else if(call.method.equals("hoverInitial")) {
@@ -97,7 +96,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
   public void onDetachedFromActivity() {
     activity = null;
     ///this help us to destroy the smsReceiver
-   // hoverUssdApi.destroySmsReceiver();
+   hoverUssdApi.destroySmsReceiver();
 
   }
 
@@ -108,7 +107,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
       Toast.makeText(activity, "Please wait for confirmation", Toast.LENGTH_LONG).show();
       eventSink.success("pending");
-
+      activity = null;
       return true;
 
     } else if (requestCode == 0 && resultCode == Activity.RESULT_CANCELED) {
