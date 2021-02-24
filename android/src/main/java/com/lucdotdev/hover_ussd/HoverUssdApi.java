@@ -35,7 +35,7 @@ public class HoverUssdApi {
 
 
             ///Initialize @HoverBuilder
-            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id).setHeader("Processing").initialProcessingMessage("...");
+            final HoverParameters.Builder builder = new HoverParameters.Builder(activity).request(action_id).setHeader("Processing... Please Wait").initialProcessingMessage("...").showUserStepDescriptions(true).hideFinalUssd(true);
 
             ///If there are action with variables
             ///
