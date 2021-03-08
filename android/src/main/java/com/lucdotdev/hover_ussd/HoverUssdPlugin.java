@@ -55,7 +55,7 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
       hoverUssdApi = new HoverUssdApi(activity);
       hoverUssdApi.sendUssd((String) call.argument("action_id"), (HashMap<String, String>) call.argument("extras"));
-      activity.finishAffinity();
+
 
     } else if(call.method.equals("hoverInitial")) {
       Hover.initialize(activity.getApplicationContext());
@@ -100,15 +100,17 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
       Toast.makeText(activity, "Please wait for confirmation", Toast.LENGTH_LONG).show();
       eventSink.success("pending");
+
       return true;
 
     } else if (requestCode == 0 && resultCode == Activity.RESULT_CANCELED) {
+
+      Toast.makeText(activity, "Error: ", Toast.LENGTH_LONG).show();
 
       eventSink.success("failed");
 
       return true;
     }
-
     return false;
   }
 
@@ -119,7 +121,8 @@ public class HoverUssdPlugin implements FlutterPlugin, MethodCallHandler, Activi
 
   @Override
   public void onCancel(Object arguments) {
-    activity.finish();
+
+
   }
 
 
