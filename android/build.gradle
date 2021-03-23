@@ -42,6 +42,6 @@ android {
     }
     dependencies {
 
-        implementation 'com.hover:android-sdk:1.7.1-noSMS'
+        implementation 'com.hover:android-sdk:1.6.6-noSMS'
     }
 }
